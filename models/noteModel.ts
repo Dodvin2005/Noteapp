@@ -28,4 +28,6 @@ const noteSchema = new mongoose.Schema<Iuser>({
     timestamps:true
 })
 
-export default mongoose.models.notes || mongoose.model<Iuser>("users",noteSchema)
+const notes = mongoose.models.notes || mongoose.model<Iuser>("users", noteSchema)
+
+export default notes
